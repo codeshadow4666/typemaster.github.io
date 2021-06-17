@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kotta+One&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+  <title>Typing like Fighting</title>
+  <style>
+    .preloader {
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      z-index: 234234234234234234234;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      flex-direction: column;
+      font-family: 'Kotta One', serif;
+    }
+
+    #bulb {
+      font-size: 200px;
+      color: rgba(255, 252, 252, 0.459);
+    }
+  </style>
+</head>
+
+
+<body onload="loadingbattery()">
+  <div class="preloader">
+    <span id="bulb" class="fa">&#xf244;</span>
+    <h3>Loading...</h3>
+  </div>
+<!-- .................battery ending.................  -->
+  <!-- acutall work starting here  -->
+<div  id="starter" class="starter">
+  <p>Do you wanna to "Play"</p>
+  <button class="playbtn" id="startbtn" value="Play" class="btn btn-outline-warning">Play</button>
+</div>
+<!-- main page  -->
+<div class="main">
+  
+  <div class="center">
+    
+    <p id="timer" class="p">120 sec</p>
+    <p id="para" class="p">
+   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo impedit recusandae expedita, voluptatibus culpa nostrum neque quisquam saepe commodi unde.
+      
+    </p>
+    <div id="textareadiv">
+      <textarea class="p" placeholder="Type here......" name="textarea"  type="text" id="textarea" ></textarea>
+      
+    </div>
+    
+  </div>
+</div>
+
+<!-- main page  -->
+<!-- result page  -->
+
+<div style="display: none;"  id="result">
+
+  <table class="table table-hover table-dark">
+  
+    <tbody>
+      <tr >
+     
+        <td colspan="2">Result</td>
+        
+      </tr>
+      <tr>
+   
+        <td>Speed</td>
+       
+        <td> <span id="speed"></span></td>
+      
+      </tr>
+      <tr>
+   
+        <td>Corret</td>
+        <td> <span id="correct"></span></td>
+      </tr>
+      <tr>
+   
+        <td>Mistakes</td>
+        <td><span id="errors"></span></td>
+      </tr>
+      <tr>
+   
+        
+        <td>Grade</td>
+        <td><span id="grade"></span></td>
+      </tr>
+      <tr >
+     
+        <td colspan="2"><p id="commenting"></p></td>
+        
+      </tr>
+     
+    </tbody>
+  </table>
+  <button id="playagain" class="playbtn">Play Again</button>
+</div>
+
+<!-- result page  -->
+
+
+  <!-- script starting here  -->
+  <script src="./script.js"></script>
+  <script>
+
+    let cc = 3;
+    window.inter = setInterval(() => {
+
+
+      bulb.innerHTML = `&#xf24${cc};`;
+      cc--;
+      if (cc == -1) {
+        cc = 4;
+      }
+
+    }, 200);
+    function loadingbattery() {
+      const load = document.querySelector('.preloader');
+      load.style.cssText = "display:none !important;";
+      clearInterval(inter);
+
+    }
+  </script>
+  <!-- script starting here  -->
+
+</body>
+
+</html>
