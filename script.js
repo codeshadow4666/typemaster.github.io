@@ -1,4 +1,4 @@
-let paragraphs=["The 1965 war between India and Pakistan was the second conflict between the two countries over the status of the state of Jammu and Kashmir. The clash did not resolve this dispute, but it did engage the United States and the Soviet Union in ways that would have important implications for subsequent superpower involvement in the region. A The dispute over this region originated in the process of decolonization in South Asia. When the British colony of India gained its","Dragons are among the most popular and enduring of the world's mythological creatures.Dragon tales are known in many cultures, from the Americas to Europe, and from India to China. They have a long and rich history in many forms and continue to populate our books, films and television shows.It's not clear when or where stories of dragons first emerged, but the huge, flying serpents were described at least as early as the age of the ancient Greeks and Sumerians. OK","Owls belong to the phylogenetic class Aves. Two distinct families contain the more than 200 species of owls. The family Tytonidae contains approximately 17 known species of barn owls; the other species belong to the family Strigidae.The oldest known owl fossils are from the Miocene, which occurred 38 to 54 million years ago. Based on the fossil evidence, these ancient owls evolved into the 2 families of modern owls. The oldest barn owl fossils found thus far are estimated .."];
+let paragraphs=["The 1965 war between India and Pakistan was the second conflict between the two countries over the status of the state of Jammu and Kashmir. The clash did not resolve this dispute, but it did engage the United States and the Soviet Union in ways that would have important implications for subsequent superpower involvement in the region. A The dispute over this region originated in the process of decolonization in South Asia. When the British colony of India gained its","Dragons are among the most popular and enduring of the world's mythological creatures.Dragon tales are known in many cultures, from the Americas to Europe, and from India to China. They have a long and rich history in many forms and continue to populate our books, films and television shows.It's not clear when or where stories of dragons first emerged, but the huge, flying serpents were described at least as early as the age of the ancient Greeks and Sumerians. OK","Owls belong to the phylogenetic class Aves. Two distinct families contain the more than 200 species of owls. The family Tytonidae contains approximately 17 known species of barn owls; the other species belong to the family Strigidae.The oldest known owl fossils are from the Miocene, which occurred 38 to 54 million years ago. Based on the fossil evidence, these ancient owls evolved into the 2 families of modern owls. The oldest barn owl fossils found thus far are estimated ..","Prior to its discovery in 1994, the  was only known from the fossil record. Despite its name, Wollemia is not a true pine or member of the the pine family but is related to the Agathis, another ancient plant on this list. Wollemia were named for the Wollemi National Park in New South Wales, Australia, which is where the first living specimens were found.The Wollemi pine is critically endangered and is on the IUCN’s (International Union for Conservation of Nature).","The mythical kraken may be the largest sea monster ever imagined. Some stories described it as more than 2.5 kilometers around with arms as large as ship's masts. Perhaps based on sightings of giant squid tentacles, this multi-armed monster rarely attacked humans, preferring to stay in deep water where it feasted on fish. The chief dangers came from being too close when it surfaced--or too close when it sank, as a boat could be sucked down in the whirlpool."];
 // referencing 
 
 window.pararray=[];
@@ -85,10 +85,10 @@ function slicepara(p){
 // slice para 
 // random paragraph 
 function randompara(){
-    let rand=Math.floor((Math.random())*3);
+    let rand=Math.floor((Math.random())*paragraphs.length);
     let p=paragraphs[rand];
     slicepara(p);
-    
+    console.log(paragraphs.length);
 }
 // random paragraph ending
 
@@ -411,7 +411,7 @@ showresult();
 
 
 // PREVENT CONTEXT MENU FROM OPENING
-document.addEventListener("contextmenu", function(evt){
-  evt.preventDefault();
-}, false);
+// document.addEventListener("contextmenu", function(evt){
+//   evt.preventDefault();
+// }, false);
 
