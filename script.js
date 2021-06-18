@@ -410,8 +410,4 @@ showresult();
 
 
 
-// PREVENT CONTEXT MENU FROM OPENING
-// document.addEventListener("contextmenu", function(evt){
-//   evt.preventDefault();
-// }, false);
 
