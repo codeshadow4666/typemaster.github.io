@@ -40,16 +40,18 @@ window.showparainterval=setInterval(()=>{
     pararray[i]=text_value;
     
     // calculation(text_value,allpara[i]);
-    if(text_value.length==allpara[i].join(" ").length)
+    if(text_value.length>=allpara[i].join(" ").length)
     {
         
         i++;
         totalpara++;
+      
         if(i==4){
             clearInterval(showparainterval);
-            clearInterval(cleartimer);
-        
-showresult();
+        clearInterval(cleartimer);
+            
+        showresult();
+        textarea.value="";
         }
         else if (i!=4){
 
@@ -105,7 +107,8 @@ const closestart=()=>{
 stbtn.addEventListener('click',closestart);
 playagain.onclick=()=>{
     result.style.cssText="display:none; !important";
-    timer.innerHTML=`60 sec`;
+    timer.innerHTML=`120 sec`;
+    time=120;
     randompara();
 }
 // starting page 
@@ -120,7 +123,7 @@ function textchecker(){
             clearInterval(chkr);
         }
         
-    }, 50);
+    }, 10);
 }
 
 function createresult()
@@ -367,7 +370,6 @@ commenting.innerHTML=' Infinity  ("-") !';
 }
 
 tablespeed.innerHTML=speed +" Wpm"
-console.log(speed);
 }
 
 // checker function
@@ -375,15 +377,17 @@ console.log(speed);
 function showresult(){
     createresult();
 
-    textarea.value="";
+   
     tablecorr.innerHTML=correct +" words";
     tableerr.innerHTML=incorrect +" words";
       gradespeed(correct,incorrect);
-    setTimeout(()=>{
+   
 
         result.style.cssText="display:flex; !important";
-    },1000);
+        textarea.value="";
+   
     textchecker();
+    
 }
 // show result function 
 
