@@ -105,7 +105,10 @@ const closestart=()=>{
 }
 
 stbtn.addEventListener('click',closestart);
+
+// playagain
 playagain.onclick=()=>{
+    textarea.disabled=false;
     result.style.cssText="display:none; !important";
     timer.innerHTML=`120 sec`;
     time=120;
@@ -376,7 +379,7 @@ tablespeed.innerHTML=speed +" Wpm"
 // show result function 
 function showresult(){
     createresult();
-
+textarea.disabled=true;
    
     tablecorr.innerHTML=correct +" words";
     tableerr.innerHTML=incorrect +" words";
